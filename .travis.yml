@@ -8,6 +8,7 @@ python:
   - "3.8"
   - "nightly"
 install:
+    - sudo apt-get install -y libgdal-dev
     - git clone https://github.com/PolarGeospatialCenter/gdal-full.git
     # see travis_installer_input_details.txt for info
     - cat travis_installer_input.txt | /bin/bash ./gdal-full/install-scripts/gdal-install.sh
