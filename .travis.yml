@@ -1,0 +1,18 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "nightly"
+install:
+    - pip install nose
+    - git clone https://github.com/PolarGeospatialCenter/gdal-full.git
+    # see travis_installer_input_details.txt for info
+    - cat travis_installer_input.txt | /bin/bash ./gdall-full/install-scripts/gdal-install.sh
+before_script:
+    - gdal-config --version
+script:
+    - nosetests
