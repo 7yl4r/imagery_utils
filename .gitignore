@@ -1,7 +1,0 @@
-**/*.pyc
-/mosaic_bash_scripts
-/tests/testdata
-*.pyc
-.idea/
-.coverage
-htmlcov/

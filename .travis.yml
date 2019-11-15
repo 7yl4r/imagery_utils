@@ -19,18 +19,18 @@ script:
     # ==================================================================
     # === publically-runnable tests
     # ==================================================================
-    - python tests/unit_test_taskhandler.py
+    - python -m tests.unit.taskhandler_test
     # ==================================================================
     # ==================================================================
     # === (disabled) tests that require (non-public) `./tests/testdata/`
     # ==================================================================
-    #- python tests/func_test_mosaic.py
-    # - python tests/func_test_ndvi.py
-    # - python tests/func_test_ortho.py
-    # - python tests/func_test_pansharpen.py
-    # - python tests/unit_test_mosaic.py
-    # - python tests/unit_test_ndvi.py
-    # - python tests/unit_test_ortho_functions.py
-    # - python tests/unit_test_pansharpen.py
-    # - python tests/unit_test_utils.py
+    # - python ./tests/func/mosaic_test.py
+    # - python ./tests/func/ndvi_test.py
+    # - python ./tests/func/ortho_test.py
+    # - python ./tests/func/pansharpen_test.py
+    # - python ./tests/unit/mosaic_test.py
+    # - python ./tests/unit/ndvi_test.py
+    # - python ./tests/unit/ortho_functions_test.py
+    # - python ./tests/unit/pansharpen_test.py
+    # - python ./tests/unit/utils_test.py
     # ==================================================================
