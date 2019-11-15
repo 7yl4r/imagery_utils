@@ -8,11 +8,28 @@ python:
   - "3.8"
   - "nightly"
 install:
-    - pip install nose
     - git clone https://github.com/PolarGeospatialCenter/gdal-full.git
     # see travis_installer_input_details.txt for info
-    - cat travis_installer_input.txt | /bin/bash ./gdall-full/install-scripts/gdal-install.sh
+    - cat travis_installer_input.txt | /bin/bash ./gdal-full/install-scripts/gdal-install.sh
 before_script:
     - gdal-config --version
+    - source ./gdal_installation/init-gdal.sh
 script:
-    - nosetests
+    # ==================================================================
+    # === publically-runnable tests
+    # ==================================================================
+    - python tests/unit_test_taskhandler.py
+    # ==================================================================
+    # ==================================================================
+    # === (disabled) tests that require (non-public) `./tests/testdata/`
+    # ==================================================================
+    #- python tests/func_test_mosaic.py
+    # - python tests/func_test_ndvi.py
+    # - python tests/func_test_ortho.py
+    # - python tests/func_test_pansharpen.py
+    # - python tests/unit_test_mosaic.py
+    # - python tests/unit_test_ndvi.py
+    # - python tests/unit_test_ortho_functions.py
+    # - python tests/unit_test_pansharpen.py
+    # - python tests/unit_test_utils.py
+    # ==================================================================
