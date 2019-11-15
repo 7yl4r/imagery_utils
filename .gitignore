@@ -1,0 +1,19 @@
+# python bytecode
+**/*.pyc
+*.pyc
+
+# test data
+/mosaic_bash_scripts
+/tests/testdata
+
+# pycharm
+.idea/
+
+# code coverage checks
+.coverage
+htmlcov/
+
+# installation artifacts
+gdal-full/
+gdal_installation/
+output_*.log
