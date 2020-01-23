@@ -29,7 +29,7 @@ class Test_pgc_ortho(TestCase):
         from pgc_ortho import main
         import sys
         testargs = [
-            'pgc_ortho.py'
+            'pgc_ortho.py',  # /media/tylar/filestore/git-repos/imars/imagery_utils/pgc_ortho.py
             '-p', '4326',
             '-c', 'ns',
             '-t', 'UInt16',
