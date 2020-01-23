@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # python bytecode
 **/*.pyc
 *.pyc
@@ -17,3 +18,12 @@ htmlcov/
 gdal-full/
 gdal_installation/
 output_*.log
+=======
+**/*.pyc
+/mosaic_bash_scripts
+/tests/testdata
+*.pyc
+.idea/
+.coverage
+htmlcov/
+>>>>>>> parent of 2070d0d... mv tests to match pytest conventions
