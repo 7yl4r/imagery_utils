@@ -3,11 +3,10 @@ from datetime import datetime, timedelta
 
 from xml.dom import minidom
 from xml.etree import cElementTree as ET
-import ogr, osr, gdalconst
 try:
-    from osgeo import gdal
+    from osgeo import gdal, ogr, osr, gdalconst
 except ImportError:
-    import gdal
+    import gdal, ogr, osr, gdalconst
 
 gdal.SetConfigOption('GDAL_PAM_ENABLED', 'NO')
 
