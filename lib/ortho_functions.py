@@ -4,8 +4,10 @@ from datetime import datetime, timedelta
 from lib import utils, taskhandler
 from xml.dom import minidom
 from xml.etree import cElementTree as ET
-
-import gdal, ogr, osr, gdalconst
+try:
+    from osgeo import gdal, ogr, osr, gdalconst
+except: 
+    import gdal, ogr, osr, gdalconst
 
 #### Create Loggers
 logger = logging.getLogger("logger")
