@@ -35,7 +35,7 @@ class SpatialRef(object):
         }
 
         for pattern, replacement in proj4_patterns.iteritems():
-            if proj4_string.find(pattern) <> -1:
+            if int(proj4_string.find(pattern)) != -1:
                 proj4_string = proj4_string.replace(pattern,replacement)
 
         self.srs = srs
