@@ -20,7 +20,7 @@ class SpatialRef(object):
         srs = osr.SpatialReference()
         try:
             epsgcode = int(epsg)
-        except ValueError, e:
+        except ValueError as e:
             raise RuntimeError("EPSG value must be an integer: %s" %epsg)
         else:
             err = srs.ImportFromEPSG(epsgcode)
@@ -179,7 +179,7 @@ def delete_temp_files(names):
             if not "log" in os.path.basename(f):
                 try:
                     os.remove(f)
-                except Exception, e:
+                except Exception as e:
                     logger.warning('Could not remove %s: %s' %(os.path.basename(f),e))
 
 
@@ -187,7 +187,7 @@ def getGEMetadataAsXml(metafile):
     if os.path.isfile(metafile):
         try:
             metaf = open(metafile, "r")
-        except IOError, err:
+        except IOError as err:
             logger.error("Could not open metadata file %s because %s" % (metafile, err))
             raise
     else:
@@ -270,7 +270,7 @@ def getIKMetadataAsXml(metafile):
     if os.path.isfile(metafile) and os.path.getsize(metafile) > 0:
         try:
             metaf = open(metafile, "r")
-        except IOError, err:
+        except IOError as err:
             logger.error( "Could not open metadata file %s because %s" % (metafile, err))
             raise
     else:
